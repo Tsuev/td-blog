@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Mazadaran Mansur Project</h1>
+    <h1>У моего проекта день рождения</h1>
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
