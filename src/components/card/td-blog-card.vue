@@ -1,16 +1,18 @@
 <template>
-  <div class="td-card">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title mb-0">{{ title }}</h5>
+  <div class="td-card col-12 p-1">
+
+    <div v-for="article in articles" :key="article.id" class="card my-3">
+      <div class="card-header pb-0">
+        <h5 class="card-title mb-0">{{ article.title }}</h5>
       </div>
       <div class="card-body">
         <p class="card-text">
-          {{ description }}
+          {{ article.text }}
         </p>
-        <a href="/" class="btn btn-primary">Go somewhere</a>
+        <router-link :to="article.route" tag="a" class="btn btn-info">Прочитать</router-link>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -18,19 +20,10 @@
 export default {
   name: "td-card",
   props: {
-    title: {
-      type: String,
-      default: "Заголовок",
-    },
-    description: {
-      type: String,
-      default:
-        "Описание Описание Описание Описание Описание Описание Описание Описание Описание ",
-    },
-    route: {
-      type: String,
-      default: "/card",
-    },
+    articles: {
+      type: Array,
+      default: () => []
+    }
   },
 };
 </script>
