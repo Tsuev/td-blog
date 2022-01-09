@@ -1,16 +1,11 @@
 <template>
-  <quill-editor
-    ref="myQuillEditor"
-    v-model="content"
-    :options="editorOption"
-    @blur="onEditorBlur($event)"
-    @focus="onEditorFocus($event)"
-    @ready="onEditorReady($event)"
-  />
+  <td-article-constructor/>
 </template>
 
 <script>
-export default {};
+import tdArticleConstructor from '../../components/admin/td-article-constructor.vue';
+export default {
+  components: { tdArticleConstructor },};
 </script>
 
 <style>

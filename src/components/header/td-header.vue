@@ -6,8 +6,6 @@
 
       <td-search />
 
-      <td-menu />
-
 			<td-profile v-if="false"/>
 
     </nav>
@@ -15,12 +13,11 @@
 </template>
 
 <script>
-import tdMenu from "./td-menu.vue";
 import tdSearch from "./td-search.vue";
 import tdBurgerIco from "./td-burger-ico.vue";
 import TdProfile from './td-profile.vue';
 export default {
-  components: { tdMenu, tdSearch, tdBurgerIco, TdProfile },
+  components: { tdSearch, tdBurgerIco, TdProfile },
   name: "td-header",
 };
 </script>

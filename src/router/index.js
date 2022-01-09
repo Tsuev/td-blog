@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from '../store/index'
 
 Vue.use(VueRouter);
 
@@ -27,7 +28,8 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
-    component: () => import("../views/pages/td-admin.vue")
+    component: () => import("../views/pages/td-admin.vue"),
+    beforeEnter: (to, from, next) => store.state.isAdmin ? next() : next('/login')
   },
   {
     path: '*',

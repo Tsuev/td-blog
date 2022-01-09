@@ -5,21 +5,21 @@
       <h2 class="text-center">Войти в админ панель</h2>
 
         <div class="mb-3">
-          <label class="form-label">Login</label>
+          <label class="form-label">Логин</label>
           <input
             class="form-control form-control-lg"
             type="text"
             name="email"
-            placeholder="Enter your email"
+            placeholder="Введите логин"
           />
         </div>
         <div class="mb-3">
-          <label class="form-label">Password</label>
+          <label class="form-label">Пароль</label>
           <input
             class="form-control form-control-lg"
             type="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Введите пароль"
           />
         </div>
         <div class="text-center mt-3">
