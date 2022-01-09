@@ -7,12 +7,12 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: () => import("../views/pages/td-home.vue"),
   },
   {
     path: "/articles",
-    name: "Articles",
+    name: "articles",
     component: () => import("../views/pages/td-articles-list.vue"),
   },
   {
@@ -33,14 +33,14 @@ const routes = [
   },
   {
     path: '*',
-    name: 'Error',
+    name: 'error',
     component: () => import("../views/error/td-error-page.vue")
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: '/td-blog/',
   routes,
 });
 
